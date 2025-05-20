@@ -67,7 +67,7 @@ session_start();
                 <div class="carousel-item active">
                     <img src="assets/img/bg - index.jpg" alt="">
                     <div class="carousel-container">
-                        <h2> Welcome to Indigenouse People IS</h2>
+                        <h2> Welcome to Indigenous People IS</h2>
                         <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
                             aspernatur
                             aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi

@@ -23,6 +23,8 @@
 <!-- Form Wizard Script -->
 <script src="../assets/js/plugins/form-wizard.js"></script>
 
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <!-- AOS Animation Plugin-->
 
 <!-- App Script -->

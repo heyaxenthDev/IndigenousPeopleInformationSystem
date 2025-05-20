@@ -41,15 +41,16 @@ include 'alert.php';
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
-                                            <div class="form-group">
+                                            <div class="form-group position-relative">
                                                 <label for="showPassword" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="showPassword"
+                                                <input type="password" class="form-control pe-5" id="showPassword"
                                                     name="password" aria-describedby="password" placeholder=" " />
                                                 <span hidden="hidden" class="field-icon toggle-password bi bi-eye-fill"
                                                     id="icon"
-                                                    style="position: absolute; right: 12px; transform: translate(-85%, -40%); top: 58.3%; cursor: pointer;"></span>
+                                                    style="position: absolute; top: 50%; right: 15px; transform: translateY(-50%); top: 72.5%; cursor: pointer;"></span>
                                             </div>
                                         </div>
+
                                         <script src="js/show-password.js"></script>
 
                                         <div class="col-lg-12 mb-3 d-flex justify-content-end">

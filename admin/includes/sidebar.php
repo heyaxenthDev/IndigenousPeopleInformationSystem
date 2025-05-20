@@ -1,3 +1,18 @@
+<?php 
+    // Get the current file name
+    $current_page = basename($_SERVER['PHP_SELF'], ".php");
+
+    // Function to check if a file exists, fallback to Page404.html if not
+    function get_page_link($page_name) {
+        $file_path = $page_name . '.php';
+        if (file_exists($file_path)) {
+            return $file_path;
+        } else {
+            return 'errors/error404.html';
+        }
+    }
+?>
+<!-- Sidebar -->
 <aside class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all">
     <div class="sidebar-header d-flex align-items-center justify-content-start">
         <a href="../admin/dashboard" class="navbar-brand">
@@ -39,7 +54,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../admin/dashboard">
+                    <a class="nav-link <?php echo $current_page == 'dashboard' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../admin/dashboard') ?>" aria-current="page">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -64,7 +80,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../admin/registered-ip">
+                    <a class="nav-link <?php echo $current_page == 'registered-ip' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../admin/registered-ip') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -88,11 +105,12 @@
                                     fill="currentColor"></path>
                             </svg>
                         </i>
-                        <span class="item-name">Regustered IP</span>
+                        <span class="item-name">Registered IP</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../registered-ip">
+                    <a class="nav-link <?php echo $current_page == 'documents' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../admin/documents') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -110,22 +128,10 @@
                         <span class="item-name">Documents</span>
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="icon">
-                            <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                class="icon-20">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M8.53162 2.93677C10.7165 1.66727 13.402 1.68946 15.5664 2.99489C17.7095 4.32691 19.012 6.70418 18.9998 9.26144C18.95 11.8019 17.5533 14.19 15.8075 16.0361C14.7998 17.1064 13.6726 18.0528 12.4488 18.856C12.3228 18.9289 12.1848 18.9777 12.0415 19C11.9036 18.9941 11.7693 18.9534 11.6508 18.8814C9.78243 17.6746 8.14334 16.134 6.81233 14.334C5.69859 12.8314 5.06584 11.016 5 9.13442C4.99856 6.57225 6.34677 4.20627 8.53162 2.93677ZM9.79416 10.1948C10.1617 11.1008 11.0292 11.6918 11.9916 11.6918C12.6221 11.6964 13.2282 11.4438 13.6748 10.9905C14.1214 10.5371 14.3715 9.92064 14.3692 9.27838C14.3726 8.29804 13.7955 7.41231 12.9073 7.03477C12.0191 6.65723 10.995 6.86235 10.3133 7.55435C9.63159 8.24635 9.42664 9.28872 9.79416 10.1948Z"
-                                    fill="currentColor"></path>
-                                <ellipse opacity="0.4" cx="12" cy="21" rx="5" ry="1" fill="currentColor"></ellipse>
-                            </svg>
-                        </i>
-                        <span class="item-name">Ownership</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link <?php echo $current_page == 'account-settings' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../admin/account-settings') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">

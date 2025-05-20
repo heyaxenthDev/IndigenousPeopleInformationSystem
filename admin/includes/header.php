@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Hope UI | Responsive Bootstrap 5 Admin Dashboard Template</title>
+    <title>Indigenous People IS</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/img/favicon.ico" />
@@ -29,7 +29,34 @@
 
     <!-- RTL Css -->
     <link rel="stylesheet" href="../assets/css/rtl.min.css" />
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
+<?php 
+    // Get session user details
+    $id = $_SESSION['user_id'];
+
+    $query = "SELECT * FROM `admin` WHERE `id` = '$id'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $user = substr($row['firstname'], 0, 1) . ". " . $row['lastname'];
+            $fullname = $row['firstname'] . " " . $row['lastname'];
+            $firstname = $row['firstname'];
+            $email = $row['email'];
+            // $email_verify_status = $row['email_verify'];
+            $lastname = $row['lastname'];
+            // $user_picture = $row['picture'];
+            $dc = date("M d, Y", strtotime($row['created_at']));
+
+        }
+    }
+
+?>
 
 <body class="  ">
     <!-- loader Start -->

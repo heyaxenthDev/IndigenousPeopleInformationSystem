@@ -4529,7 +4529,7 @@ fieldset:disabled .btn {
   --bs-nav-link-padding-x: 1rem;
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-font-weight: ;
-  --bs-nav-link-color: #3a57e8;
+  --bs-nav-link-color: #9dc44e;
   --bs-nav-link-hover-color: #2e46ba;
   --bs-nav-link-disabled-color: #adb5bd;
   display: -webkit-box;
@@ -4577,8 +4577,8 @@ fieldset:disabled .btn {
   --bs-nav-tabs-border-radius: 0.25rem;
   --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
   --bs-nav-tabs-link-active-color: #ffffff;
-  --bs-nav-tabs-link-active-bg: #3a57e8;
-  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #3a57e8;
+  --bs-nav-tabs-link-active-bg: #9dc44e;
+  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #9dc44e;
   border-bottom: var(--bs-nav-tabs-border-width) solid
     var(--bs-nav-tabs-border-color);
 }
@@ -4621,7 +4621,7 @@ fieldset:disabled .btn {
 .nav-pills {
   --bs-nav-pills-border-radius: 50rem;
   --bs-nav-pills-link-active-color: #ffffff;
-  --bs-nav-pills-link-active-bg: #3a57e8;
+  --bs-nav-pills-link-active-bg: #9dc44e;
 }
 .nav-pills .nav-link {
   background: none;
@@ -16133,7 +16133,7 @@ th {
   right: auto;
   top: auto;
   cursor: pointer;
-  background: #3a57e8;
+  background: #9dc44e;
   color: #ffffff;
   z-index: 911;
   display: none;
@@ -16188,7 +16188,7 @@ th {
 }
 
 .iq-navbar.navs-color {
-  background: #3a57e8;
+  background: #9dc44e;
 }
 .iq-navbar.navs-color .navbar-nav .nav-item .nav-link {
   color: #ffffff;
@@ -20694,17 +20694,17 @@ body.offcanvas-active {
   right: -12px;
   top: 16px;
   cursor: pointer;
-  background: var(--bs-primary);
+  background: #9dc44e;
   color: #ffffff;
   padding: 0.2rem;
   -webkit-border-radius: 50rem;
   border-radius: 50rem;
-  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(58, 87, 232, 0.1);
-  box-shadow: 0 0.125rem 0.25rem rgba(58, 87, 232, 0.1);
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(157, 196, 78, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(157, 196, 78, 0.1);
 }
 .sidebar .sidebar-toggle:hover {
-  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(58, 87, 232, 0.15);
-  box-shadow: 0 0.125rem 0.25rem rgba(58, 87, 232, 0.15);
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(157, 196, 78, 0.15);
+  box-shadow: 0 0.125rem 0.25rem rgba(157, 196, 78, 0.15);
 }
 .sidebar .sidebar-toggle .icon {
   display: -webkit-box;
@@ -20808,10 +20808,10 @@ body.offcanvas-active {
   -webkit-transition-timing-function: var(--sidebar-transition-function-ease);
   -o-transition-timing-function: var(--sidebar-transition-function-ease);
   transition-timing-function: var(--sidebar-transition-function-ease);
-  color: var(--bs-primary);
+  color: rgba(157, 196, 78, 1);
 }
 .sidebar-base .nav-item .nav-link:hover {
-  color: var(--bs-primary);
+  color: rgba(157, 196, 78, 1);
 }
 .sidebar-base .nav-item .nav-link.static-item {
   margin-bottom: 0.5rem;
@@ -20963,7 +20963,7 @@ body {
 }
 .sidebar.sidebar-default .nav-link:not(.static-item).active,
 .sidebar.sidebar-default .nav-link:not(.static-item)[aria-expanded="true"] {
-  background: var(--bs-primary);
+  background: #9dc44e;
   color: #ffffff;
   -webkit-box-shadow: 0 10px 20px -10px rgba(var(--shadow-dark-color), 38%);
   box-shadow: 0 10px 20px -10px rgba(var(--shadow-dark-color), 38%);
@@ -20971,7 +20971,7 @@ body {
 .sidebar.sidebar-default
   .nav-link:not(.static-item):hover:not(.active):not([aria-expanded="true"]) {
   background: var(--bs-primary-tint-90);
-  color: var(--bs-primary);
+  color: #9dc44e;
   -webkit-box-shadow: unset;
   box-shadow: unset;
 }
@@ -21012,42 +21012,6 @@ body {
 .sidebar.navs-pill-all .sidebar-body .nav-item .nav-link {
   -webkit-border-radius: 50rem !important;
   border-radius: 50rem !important;
-}
-
-.sidebar.sidebar-dark {
-  background: #212529;
-}
-.sidebar.sidebar-dark .navbar-brand svg {
-  color: #ffffff;
-}
-.sidebar.sidebar-dark .sidebar-header {
-  border-bottom-color: #373b3e;
-}
-.sidebar.sidebar-dark .sidebar-header .logo-title {
-  color: #e9e9ea;
-}
-.sidebar.sidebar-dark .nav-item .nav-link:not(.active) {
-  color: #ffffff;
-}
-.sidebar.sidebar-dark.sidebar-default .nav-link {
-  --shadow-dark-color: #ffffff;
-}
-.sidebar.sidebar-dark.sidebar-default .nav-link.active {
-  background-color: var(--bs-primary);
-  -webkit-box-shadow: 0 10px 20px -10px rgba(var(--shadow-dark-color), 38%);
-  box-shadow: 0 10px 20px -10px rgba(var(--shadow-dark-color), 38%);
-}
-.sidebar.sidebar-dark.sidebar-default .nav-link:hover:not(.active) {
-  color: var(--bs-primary);
-}
-.sidebar.sidebar-dark.sidebar-default
-  .navbar-nav
-  .nav-item
-  .nav-link:not(.disabled)[aria-expanded="true"] {
-  color: #ffffff;
-}
-.sidebar.sidebar-dark.sidebar-base .nav-item.static-item .default-icon {
-  color: #ffffff;
 }
 
 .sidebar.sidebar-color {
@@ -21273,7 +21237,7 @@ body {
   top: 16px;
   padding: 0.2rem;
   cursor: pointer;
-  background: var(--bs-primary);
+  background: #9dc44e;
   color: #ffffff;
   -webkit-border-radius: 50rem;
   border-radius: 50rem;

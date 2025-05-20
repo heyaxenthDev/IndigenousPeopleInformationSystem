@@ -58,6 +58,9 @@
 
 <!-- App Script -->
 <script src="../assets/js/hope-ui.js" defer></script>
+
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
