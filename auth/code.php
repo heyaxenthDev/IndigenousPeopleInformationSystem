@@ -96,5 +96,47 @@ if (isset($_POST['signin']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
     $conn->close();
 }
+
+if (isset($_POST['userSignin']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['client_auth'] = true;
+            $_SESSION['status'] = "Success";
+            $_SESSION['status_text'] = "Login successful";
+            $_SESSION['status_code'] = "success";
+            $_SESSION['status_btn'] = "Back";
+
+            header('location: ../client/dashboard.php');
+            exit;
+        } else {
+            $_SESSION['status'] = "Error";
+            $_SESSION['status_text'] = "Invalid password";
+            $_SESSION['status_code'] = "error";
+            $_SESSION['status_btn'] = "Back";
+            header("Location: {$_SERVER['HTTP_REFERER']}");
+            exit;
+        }
+    } else {
+        $_SESSION['status'] = "Error";
+        $_SESSION['status_text'] = "Invalid email";
+        $_SESSION['status_code'] = "error";
+        $_SESSION['status_btn'] = "Back";
+        header("Location: {$_SERVER['HTTP_REFERER']}");
+        exit;
+    }
+    $stmt->close();
+    $conn->close();
+}
             
 ?>

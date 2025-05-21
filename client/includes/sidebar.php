@@ -8,14 +8,14 @@
         if (file_exists($file_path)) {
             return $file_path;
         } else {
-            return 'errors/error404.html';
+            return 'errors/error404';
         }
     }
 ?>
 <!-- Sidebar -->
 <aside class="sidebar sidebar-default sidebar-white sidebar-base navs-rounded-all">
     <div class="sidebar-header d-flex align-items-center justify-content-start">
-        <a href="../admin/dashboard" class="navbar-brand">
+        <a href="../client/dashboard" class="navbar-brand">
             <!--Logo start-->
             <!--logo End-->
 
@@ -55,7 +55,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo $current_page == 'dashboard' ? 'active' : ''; ?>"
-                        href="<?= get_page_link('../admin/dashboard') ?>" aria-current="page">
+                        href="<?= get_page_link('../client/dashboard') ?>" aria-current="page">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -71,8 +71,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo $current_page == 'registered-ip' ? 'active' : ''; ?>"
-                        href="<?= get_page_link('../admin/registered-ip') ?>">
+                    <a class="nav-link <?php echo $current_page == 'family_record' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../client/family_record') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -96,7 +96,7 @@
                                     fill="currentColor"></path>
                             </svg>
                         </i>
-                        <span class="item-name">Registered IP</span>
+                        <span class="item-name">Family Record</span>
                     </a>
                 </li>
 
@@ -112,7 +112,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link <?php echo $current_page == 'scholarship' ? 'active' : ''; ?>"
-                        href="<?= get_page_link('../admin/scholarship') ?>">
+                        href="<?= get_page_link('../client/scholarship') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -133,7 +133,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link <?php echo $current_page == 'job_application' ? 'active' : ''; ?>"
-                        href="<?= get_page_link('../admin/job_application') ?>">
+                        href="<?= get_page_link('../client/job_application') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -160,8 +160,8 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link <?php echo $current_page == 'account-settings' ? 'active' : ''; ?>"
-                        href="<?= get_page_link('../admin/account-settings') ?>">
+                    <a class="nav-link <?php echo $current_page == 'user-account-setting' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../client/app/user-account-settings') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -400,23 +400,23 @@
                                 <div class="caption ms-3 d-none d-md-block">
                                     <h6 class="mb-0 caption-title"><?= $fullname ?></h6>
                                     <p class="mb-0 caption-sub-title">
-                                        Administrator
+                                        Client
                                     </p>
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="../admin/app/user-profile.html">Profile</a>
+                                    <a class="dropdown-item" href="../client/app/user-profile.html">Profile</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../admin/app/user-privacy-setting.html">Privacy
+                                    <a class="dropdown-item" href="../client/app/user-privacy-setting.html">Privacy
                                         Setting</a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider" />
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="../logout.php">Logout</a>
+                                    <a class="dropdown-item" href="../user-logout.php">Logout</a>
                                 </li>
                             </ul>
                         </li>

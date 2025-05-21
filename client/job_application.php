@@ -4,7 +4,6 @@
     include '../database/conn.php';
     include 'includes/header.php';
     include 'includes/sidebar.php';
-    include 'alert.php';
 
 ?>
 
@@ -16,10 +15,8 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
-                        <h4 class="card-title">Registered Indigenous Peoples</h4>
+                        <h4 class="card-title">List of Job Applications</h4>
                     </div>
-                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addIPmodal"><i
-                            class="bi bi-plus-circle"></i> Add IP Data</button>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -40,7 +37,7 @@
                             </thead>
                             <tbody>
                                 <?php 
-                                $query = "SELECT * FROM registered_ip";
+                                $query = "SELECT * FROM job_application";
                                 $result = mysqli_query($conn, $query);
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
@@ -72,16 +69,15 @@
 </div>
 
 <!-- Register IP Modal -->
-<div class="modal fade" id="addIPmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Register IP</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="ip-add.php" method="POST">
-            <div class="modal-body">
+<div class="modal fade" id="registerIpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="registerIpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form id="registerIpForm">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title text-white w-100 text-center" id="registerIpModalLabel">REGISTER IP</h5>
+                </div>
+                <div class="modal-body">
                     <div id="ipFormAlert"></div>
                     <div class="form-floating mb-2">
                         <input type="text" class="form-control" name="last_name" id="lastName" placeholder="Last Name"
@@ -111,10 +107,12 @@
                                     <option selected disabled value="">Select Gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
+                                    <!-- <option value="Other">Other</option> -->
                                 </select>
                                 <label for="gender">Gender</label>
                             </div>
                         </div>
+
                     </div>
                     <div class="row g-2 mb-2">
                         <div class="col-md-6">
@@ -136,6 +134,7 @@
                                 <label for="status">Civil Status</label>
                             </div>
                         </div>
+
                     </div>
                     <div class="form-floating mb-2">
                         <input type="text" class="form-control" name="barangay" id="barangay" placeholder="Barangay">
@@ -146,20 +145,48 @@
                             placeholder="Contact No.">
                         <label for="contactNo">Contact No.</label>
                     </div>
-                    <div class="form-floating mb-2">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                        <label for="email">Email</label>
-                    </div>
-                
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" name="addIP" class="btn btn-success">Save</button>
-            </div>
-            </form>
-        </div>
+        </form>
     </div>
 </div>
+<script>
+// Show modal when Add IP Data button is clicked
+document.querySelector('.btn-success').addEventListener('click', function(e) {
+    if (this.textContent.includes('Add IP Data')) {
+        e.preventDefault();
+        var myModal = new bootstrap.Modal(document.getElementById('registerIpModal'));
+        myModal.show();
+    }
+});
+// AJAX form submission
+document.getElementById('registerIpForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    fetch('ip-add.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            const alertDiv = document.getElementById('ipFormAlert');
+            if (data.success) {
+                alertDiv.innerHTML = '<div class="alert alert-success">' + data.message + '</div>';
+                form.reset();
+            } else {
+                alertDiv.innerHTML = '<div class="alert alert-danger">' + data.message + '</div>';
+            }
+        })
+        .catch(() => {
+            document.getElementById('ipFormAlert').innerHTML =
+                '<div class="alert alert-danger">An error occurred.</div>';
+        });
+});
+</script>
 
 
 <?php 

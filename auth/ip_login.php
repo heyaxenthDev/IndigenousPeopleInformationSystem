@@ -29,8 +29,8 @@ include 'alert.php';
                                     <!-- <h4 class="logo-title ms-3">Indigenous People Information System of Laua-an
                                         </h4> -->
                                 </a>
-                                <h2 class="mb-2 text-center">Admin Sign In</h2>
-                                <p class="text-center">Login to stay connected.</p>
+                                <h2 class="mb-2 text-center">Client Sign In</h2>
+                                <p class="text-center">Stay connected with your account.</p>
                                 <form action="code.php" method="POST">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -63,15 +63,10 @@ include 'alert.php';
                                         </div>
                                     </div>
                                     <div class="d-flex justify-content-center">
-                                        <button type="submit" class="btn btn-success" name="signin">
+                                        <button type="submit" class="btn btn-success" name="userSignin">
                                             Sign In
                                         </button>
                                     </div>
-
-                                    <p class="mt-3 text-center">
-                                        Don’t have an account?
-                                        <a href="sign-up.php" class="text-underline">Click here to sign up.</a>
-                                    </p>
                                 </form>
                             </div>
                         </div>

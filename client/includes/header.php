@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Indigenous People IS</title>
+    <title>Client | Indigenous People IS</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../assets/img/favicon.ico" />
@@ -35,26 +35,23 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <!-- <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-
 </head>
 
 <?php 
     // Get session user details
     $id = $_SESSION['user_id'];
 
-    $query = "SELECT * FROM `admin` WHERE `id` = '$id'";
+    $query = "SELECT * FROM `registered_ip` WHERE `id` = '$id'";
     $result = mysqli_query($conn, $query);
 
     if ($result && mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $user = substr($row['firstname'], 0, 1) . ". " . $row['lastname'];
-            $fullname = $row['firstname'] . " " . $row['lastname'];
-            $firstname = $row['firstname'];
+            $user = substr($row['first_name'], 0, 1) . ". " . $row['last_name'];
+            $fullname = $row['first_name'] . " " . $row['last_name'];
+            $firstname = $row['first_name'];
             $email = $row['email'];
             // $email_verify_status = $row['email_verify'];
-            $lastname = $row['lastname'];
+            $lastname = $row['last_name'];
             // $user_picture = $row['picture'];
             $dc = date("M d, Y", strtotime($row['created_at']));
 

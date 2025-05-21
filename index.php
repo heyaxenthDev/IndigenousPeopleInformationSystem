@@ -72,7 +72,7 @@ session_start();
                             aspernatur
                             aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
                             nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-                        <a href="#featured-services" class="btn-get-started">Get Started</a>
+                        <a href="./auth/ip_login.php" class="btn-get-started">Get Started</a>
                     </div>
                 </div><!-- End Carousel Item -->
 

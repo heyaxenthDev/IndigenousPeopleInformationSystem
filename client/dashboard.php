@@ -4,7 +4,6 @@
     include '../database/conn.php';
     include 'includes/header.php';
     include 'includes/sidebar.php';
-    include 'alert.php';
 
 ?>
 <div class="conatiner-fluid content-inner mt-n5 py-0">
