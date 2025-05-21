@@ -67,11 +67,12 @@ session_start();
                 <div class="carousel-item active">
                     <img src="assets/img/bg - index.jpg" alt="">
                     <div class="carousel-container">
-                        <h2> Welcome to Indigenous People IS</h2>
-                        <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                            aspernatur
-                            aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-                            nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+                        <h2 class="text-center"> Welcome to <br> IP Information System of Laua-an</h2>
+                        <p>
+                            Laua-an, Antique is home to the Iraynon-Bukidnon, an Indigenous group known for their deep
+                            cultural roots and sustainable way of life. They preserve their traditions through farming,
+                            weaving, and a strong connection to nature.
+                        </p>
                         <a href="./auth/ip_login.php" class="btn-get-started">Get Started</a>
                     </div>
                 </div><!-- End Carousel Item -->
@@ -93,26 +94,22 @@ session_start();
 
                     <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            Laua-an, a peaceful town nestled in the province of Antique, is home to a proud and
+                            resilient Indigenous People—the Iraynon-Bukidnon. Known for their deep connection to the
+                            land and rich cultural heritage, the Iraynon-Bukidnon have preserved their traditional way
+                            of life through farming, weaving, and community rituals passed down through generations.
                         </p>
-                        <ul>
-                            <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</span></li>
-                            <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in
-                                    voluptate velit.</span></li>
-                            <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea
-                                    commodo</span></li>
-                        </ul>
+
                     </div>
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum. </p>
-                        <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                        <p>They are stewards of the upland forests and rivers, practicing sustainable living and valuing
+                            harmony with nature. Despite challenges brought by modern development, the Iraynon-Bukidnon
+                            continue to uphold their identity, traditions, and rights with dignity and strength.
+
+                            Laua-an celebrates and supports its Indigenous communities, recognizing their vital role in
+                            the town’s cultural diversity and heritage. </p>
+                        <!-- <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a> -->
                     </div>
 
                 </div>
