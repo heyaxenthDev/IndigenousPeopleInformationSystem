@@ -9,92 +9,90 @@
 ?>
 <div class="conatiner-fluid content-inner mt-n5 py-0">
     <div class="row">
-        <div class="col-md-12 col-lg-12">
-            <div class="row row-cols-1">
-                <div class="overflow-hidden d-slider1">
-                    <ul class="p-0 m-0 mb-2 swiper-wrapper list-inline">
-                        <li class="swiper-slide card card-slide" data-aos="fade-up" data-aos-delay="700">
-                            <div class="card-body">
-                                <div class="progress-widget">
-                                    <div id="circle-progress-01"
-                                        class="text-center circle-progress-01 circle-progress circle-progress-primary"
-                                        data-min-value="0" data-max-value="100" data-value="90" data-type="percent">
-                                        <svg class="card-slie-arrow icon-24" width="24" viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
-                                        </svg>
-                                    </div>
-                                    <div class="progress-detail">
-                                        <p class="mb-2">Total Sales</p>
-                                        <h4 class="counter">$560K</h4>
-                                    </div>
-                                </div>
+        <div class="col-xl-4 col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-itmes-center">
+                        <div>
+                            <div class="p-3 rounded bg-soft-success">
+                                <svg class="icon-30" xmlns="http://www.w3.org/2000/svg" width="30px" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path
+                                        d="M9.34933 14.8577C5.38553 14.8577 2 15.47 2 17.9173C2 20.3665 5.364 20.9999 9.34933 20.9999C13.3131 20.9999 16.6987 20.3876 16.6987 17.9403C16.6987 15.4911 13.3347 14.8577 9.34933 14.8577Z"
+                                        fill="currentColor"></path>
+                                    <path opacity="0.4"
+                                        d="M9.34935 12.5248C12.049 12.5248 14.2124 10.4062 14.2124 7.76241C14.2124 5.11865 12.049 3 9.34935 3C6.65072 3 4.48633 5.11865 4.48633 7.76241C4.48633 10.4062 6.65072 12.5248 9.34935 12.5248Z"
+                                        fill="currentColor"></path>
+                                    <path opacity="0.4"
+                                        d="M16.1733 7.84873C16.1733 9.19505 15.7604 10.4513 15.0363 11.4948C14.961 11.6021 15.0275 11.7468 15.1586 11.7698C15.3406 11.7995 15.5275 11.8177 15.7183 11.8216C17.6165 11.8704 19.3201 10.6736 19.7907 8.87116C20.4884 6.19674 18.4414 3.79541 15.8338 3.79541C15.551 3.79541 15.2799 3.82416 15.0157 3.87686C14.9795 3.88453 14.9404 3.90177 14.9208 3.93244C14.8954 3.97172 14.914 4.02251 14.9394 4.05605C15.7232 5.13214 16.1733 6.44205 16.1733 7.84873Z"
+                                        fill="currentColor"></path>
+                                    <path
+                                        d="M21.779 15.1693C21.4316 14.4439 20.593 13.9465 19.3171 13.7022C18.7153 13.5585 17.0852 13.3544 15.5695 13.3831C15.547 13.386 15.5343 13.4013 15.5324 13.4109C15.5294 13.4262 15.5363 13.4492 15.5656 13.4655C16.2662 13.8047 18.9737 15.2804 18.6332 18.3927C18.6185 18.5288 18.729 18.6438 18.867 18.6246C19.5333 18.5317 21.2476 18.1704 21.779 17.0474C22.0735 16.4533 22.0735 15.7634 21.779 15.1693Z"
+                                        fill="currentColor"></path>
+                                </svg>
                             </div>
-                        </li>
-                        <li class="swiper-slide card card-slide" data-aos="fade-up" data-aos-delay="800">
-                            <div class="card-body">
-                                <div class="progress-widget">
-                                    <div id="circle-progress-02"
-                                        class="text-center circle-progress-01 circle-progress circle-progress-info"
-                                        data-min-value="0" data-max-value="100" data-value="80" data-type="percent">
-                                        <svg class="card-slie-arrow icon-24" width="24" viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z" />
-                                        </svg>
-                                    </div>
-                                    <div class="progress-detail">
-                                        <p class="mb-2">Total Profit</p>
-                                        <h4 class="counter">$185K</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide card card-slide" data-aos="fade-up" data-aos-delay="900">
-                            <div class="card-body">
-                                <div class="progress-widget">
-                                    <div id="circle-progress-03"
-                                        class="text-center circle-progress-01 circle-progress circle-progress-primary"
-                                        data-min-value="0" data-max-value="100" data-value="70" data-type="percent">
-                                        <svg class="card-slie-arrow icon-24" width="24" viewBox="0 0 24 24">
-                                            <path fill="currentColor"
-                                                d="M19,6.41L17.59,5L7,15.59V9H5V19H15V17H8.41L19,6.41Z" />
-                                        </svg>
-                                    </div>
-                                    <div class="progress-detail">
-                                        <p class="mb-2">Total Cost</p>
-                                        <h4 class="counter">$375K</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- <div class="swiper-button swiper-button-next"></div>
-                    <div class="swiper-button swiper-button-prev"></div> -->
+                        </div>
+                        <div>
+                            <?php 
+                                // Get number of registered IP from database
+                                $sql = "SELECT COUNT(*) FROM registered_ip ";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                $num_rows = $row['COUNT(*)'];
+                            ?>
+                            <h1><?php echo $num_rows; ?></h1>
+                            <p class="mb-0">Register IP</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-xl-4 col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class=" bg-soft-success rounded p-3">
+                            <svg class="icon-35" xmlns="http://www.w3.org/2000/svg" width="35px" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path
+                                    d="M9.34933 14.8577C5.38553 14.8577 2 15.47 2 17.9173C2 20.3665 5.364 20.9999 9.34933 20.9999C13.3131 20.9999 16.6987 20.3876 16.6987 17.9403C16.6987 15.4911 13.3347 14.8577 9.34933 14.8577Z"
+                                    fill="currentColor"></path>
+                                <path opacity="0.4"
+                                    d="M9.34935 12.5248C12.049 12.5248 14.2124 10.4062 14.2124 7.76241C14.2124 5.11865 12.049 3 9.34935 3C6.65072 3 4.48633 5.11865 4.48633 7.76241C4.48633 10.4062 6.65072 12.5248 9.34935 12.5248Z"
+                                    fill="currentColor"></path>
+                                <path opacity="0.4"
+                                    d="M16.1733 7.84873C16.1733 9.19505 15.7604 10.4513 15.0363 11.4948C14.961 11.6021 15.0275 11.7468 15.1586 11.7698C15.3406 11.7995 15.5275 11.8177 15.7183 11.8216C17.6165 11.8704 19.3201 10.6736 19.7907 8.87116C20.4884 6.19674 18.4414 3.79541 15.8338 3.79541C15.551 3.79541 15.2799 3.82416 15.0157 3.87686C14.9795 3.88453 14.9404 3.90177 14.9208 3.93244C14.8954 3.97172 14.914 4.02251 14.9394 4.05605C15.7232 5.13214 16.1733 6.44205 16.1733 7.84873Z"
+                                    fill="currentColor"></path>
+                                <path
+                                    d="M21.779 15.1693C21.4316 14.4439 20.593 13.9465 19.3171 13.7022C18.7153 13.5585 17.0852 13.3544 15.5695 13.3831C15.547 13.386 15.5343 13.4013 15.5324 13.4109C15.5294 13.4262 15.5363 13.4492 15.5656 13.4655C16.2662 13.8047 18.9737 15.2804 18.6332 18.3927C18.6185 18.5288 18.729 18.6438 18.867 18.6246C19.5333 18.5317 21.2476 18.1704 21.779 17.0474C22.0735 16.4533 22.0735 15.7634 21.779 15.1693Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <?php 
+                                // Get number of registered IP from database
+                                $sql = "SELECT COUNT(*) FROM users ";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                $num_rows = $row['COUNT(*)'];
+                            ?>
+                            <h1><?php echo $num_rows; ?></h1>
+                            <p class="mb-0">Users</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+    <div class="row">
         <div class="col-md-12 col-lg-8">
             <div class="row">
                 <div class="col-md-12 col-xl-6">
                     <div class="card" data-aos="fade-up" data-aos-delay="900">
                         <div class="flex-wrap card-header d-flex justify-content-between">
                             <div class="header-title">
-                                <h4 class="card-title">Earnings</h4>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="text-gray dropdown-toggle" id="dropdownMenuButton1"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    This Week
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href="#">This Week</a></li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">This Month</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                                </ul>
+                                <h4 class="card-title">Registered IP</h4>
                             </div>
                         </div>
                         <div class="card-body">
@@ -109,8 +107,8 @@
                                             </g>
                                         </svg>
                                         <div class="ms-3">
-                                            <span class="text-gray">Fashion</span>
-                                            <h6>251K</h6>
+                                            <span class="text-gray">Male</span>
+                                            <h6>##</h6>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-start">
@@ -121,8 +119,8 @@
                                             </g>
                                         </svg>
                                         <div class="ms-3">
-                                            <span class="text-gray">Accessories</span>
-                                            <h6>176K</h6>
+                                            <span class="text-gray">Female</span>
+                                            <h6>##</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -215,20 +213,6 @@
             </div>
         </div>
     </div>
-</div>
-<div class="btn-download">
-    <a class="btn btn-success px-3 py-2"
-        href="https://iqonic.design/product/admin-templates/hope-ui-admin-free-open-source-bootstrap-admin-template/"
-        target="_blank">
-        <svg class="icon-24" width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.4"
-                d="M17.554 7.29614C20.005 7.29614 22 9.35594 22 11.8876V16.9199C22 19.4453 20.01 21.5 17.564 21.5L6.448 21.5C3.996 21.5 2 19.4412 2 16.9096V11.8773C2 9.35181 3.991 7.29614 6.438 7.29614H7.378L17.554 7.29614Z"
-                fill="currentColor"></path>
-            <path
-                d="M12.5464 16.0374L15.4554 13.0695C15.7554 12.7627 15.7554 12.2691 15.4534 11.9634C15.1514 11.6587 14.6644 11.6597 14.3644 11.9654L12.7714 13.5905L12.7714 3.2821C12.7714 2.85042 12.4264 2.5 12.0004 2.5C11.5754 2.5 11.2314 2.85042 11.2314 3.2821L11.2314 13.5905L9.63742 11.9654C9.33742 11.6597 8.85043 11.6587 8.54843 11.9634C8.39743 12.1168 8.32142 12.3168 8.32142 12.518C8.32142 12.717 8.39743 12.9171 8.54643 13.0695L11.4554 16.0374C11.6004 16.1847 11.7964 16.268 12.0004 16.268C12.2054 16.268 12.4014 16.1847 12.5464 16.0374Z"
-                fill="currentColor"></path>
-        </svg>
-    </a>
 </div>
 
 <?php 

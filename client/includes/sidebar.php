@@ -30,7 +30,7 @@
             </div>
             <!--logo End-->
 
-            <h4 class="logo-title">Administrator</h4>
+            <h4 class="logo-title">Client</h4>
         </a>
         <div class="sidebar-toggle" data-toggle="sidebar" data-active="true">
             <i class="icon">

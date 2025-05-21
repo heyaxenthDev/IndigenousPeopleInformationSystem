@@ -27,18 +27,15 @@
                                     <th>First Name </th>
                                     <th>Last Name</th>
                                     <th>Middle Name</th>
-                                    <th>Suffix</th>
                                     <th>Gender</th>
-                                    <th>Age</th>
-                                    <th>Status</th>
                                     <th>Barangay</th>
-                                    <th>Contact No.</th>
+                                    <th>Email</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php 
-                                $query = "SELECT * FROM scholarship_submission";
+                                $query = "SELECT * FROM scholarship";
                                 $result = mysqli_query($conn, $query);
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
@@ -46,15 +43,15 @@
                                     <td><?php echo $row['first_name']; ?></td>
                                     <td><?php echo $row['last_name']; ?></td>
                                     <td><?php echo $row['middle_name']; ?></td>
-                                    <td><?php echo $row['suffix']; ?></td>
-                                    <td><?php echo $row['gender']; ?></td>
-                                    <td><?php echo $row['age']; ?></td>
-                                    <td><?php echo $row['status']; ?></td>
+                                    <td><?php echo $row['sex']; ?></td>
                                     <td><?php echo $row['barangay']; ?></td>
-                                    <td><?php echo $row['contact_no']; ?></td>
+                                    <td><?php echo $row['email']; ?></td>
                                     <td>
-                                        <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-                                        <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                        <button data-view-id="<?=$row['id']; ?>"
+                                            class="btn btn-sm btn-success view-btn"><i class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i
+                                                class="bi bi-pencil-square"></i></button>
+                                        <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
                                 <?php 
@@ -68,6 +65,10 @@
         </div>
     </div>
 </div>
+<?php 
+include 'utils/scholarModal.php';
+?>
+<script src="js/scholar.js"></script>
 
 <?php 
 include '../admin/includes/footer.php';

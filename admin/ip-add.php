@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insert into registered_ip
     $stmt = $conn->prepare("INSERT INTO registered_ip (last_name, first_name, middle_name, suffix, gender, age, status, barangay, contact_no, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssssisss", $last_name, $first_name, $middle_name, $suffix, $gender, $age, $status, $barangay, $contact_no, $email);
+    $stmt->bind_param("ssssssssss", $last_name, $first_name, $middle_name, $suffix, $gender, $age, $status, $barangay, $contact_no, $email);
 
     if ($stmt->execute()) {
         // Get last inserted ID

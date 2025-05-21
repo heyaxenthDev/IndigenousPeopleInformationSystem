@@ -100,8 +100,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo $current_page == 'registered-ip' ? 'active' : ''; ?>"
-                        href="<?= get_page_link('../admin/registered-ip') ?>">
+                    <a class="nav-link <?php echo $current_page == 'family_member' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../admin/family_member') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">

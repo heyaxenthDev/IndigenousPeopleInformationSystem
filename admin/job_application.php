@@ -38,7 +38,7 @@
                             </thead>
                             <tbody>
                                 <?php 
-                                $query = "SELECT * FROM job_application";
+                                $query = "SELECT * FROM job_applications";
                                 $result = mysqli_query($conn, $query);
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
@@ -68,6 +68,10 @@
         </div>
     </div>
 </div>
+
+<?php 
+include 'utils/jobModal.php';
+?>
 
 <?php 
 include '../admin/includes/footer.php';

@@ -1,11 +1,13 @@
 <?php 
-    include 'authentication.php';
+    include 'authentication.php'; 
     checkLogin(); // Call the function to check if the user is logged in
     include '../database/conn.php';
     include 'includes/header.php';
     include 'includes/sidebar.php';
+    include 'alert.php';
 
 ?>
+
 <div class="conatiner-fluid content-inner mt-n5 py-0">
     <div class="row">
         <div class="col-md-12 col-lg-12">
