@@ -16,10 +16,10 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
-                        <h4 class="card-title">Registered Indigenous Peoples</h4>
+                        <h4 class="card-title">List of IP Families</h4>
                     </div>
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addIPmodal"><i
-                            class="bi bi-plus-circle"></i> Add IP Data</button>
+                            class="bi bi-plus-circle"></i> Add IP Family</button>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -32,9 +32,9 @@
                                     <th>Suffix</th>
                                     <th>Gender</th>
                                     <th>Age</th>
-                                    <th>Status</th>
-                                    <th>Barangay</th>
-                                    <th>Contact No.</th>
+                                    <th>Civil Status</th>
+                                    <!-- <th>Barangay</th>
+                                    <th>Contact No.</th> -->
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -52,11 +52,14 @@
                                     <td><?php echo $row['gender']; ?></td>
                                     <td><?php echo $row['age']; ?></td>
                                     <td><?php echo $row['status']; ?></td>
-                                    <td><?php echo $row['barangay']; ?></td>
-                                    <td><?php echo $row['contact_no']; ?></td>
+                                    <!-- <td><?php echo $row['barangay']; ?></td> -->
+                                    <!-- <td><?php echo $row['contact_no']; ?></td> -->
                                     <td>
-                                        <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-                                        <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                        <button class="btn btn-sm btn-success view-data"
+                                            data-view-id="<?=$row['id']?>"><i class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-secondary"><i
+                                                class="bi bi-pencil-square"></i></button>
+                                        <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
                                 <?php 
@@ -82,7 +85,6 @@
             </div>
             <form action="ip-add.php" method="POST">
                 <div class="modal-body">
-                    <div id="ipFormAlert"></div>
                     <div class="form-floating mb-2">
                         <input type="text" class="form-control" name="last_name" id="lastName" placeholder="Last Name"
                             required>
@@ -160,6 +162,12 @@
         </div>
     </div>
 </div>
+
+<?php 
+include 'utils/detailsModal.php';
+?>
+
+<script src="js/details.js"></script>
 
 
 <?php 

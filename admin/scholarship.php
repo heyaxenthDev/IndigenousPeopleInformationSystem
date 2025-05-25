@@ -49,8 +49,6 @@
                                     <td>
                                         <button data-view-id="<?=$row['id']; ?>"
                                             class="btn btn-sm btn-success view-btn"><i class="bi bi-eye"></i></button>
-                                        <button class="btn btn-sm btn-secondary"><i
-                                                class="bi bi-pencil-square"></i></button>
                                         <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>

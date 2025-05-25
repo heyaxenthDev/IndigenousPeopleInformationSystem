@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => {
       const ipId = button.getAttribute("data-view-id");
 
-      fetch(`get_ip_details.php?id=${ipId}`)
+      fetch(`get_scholar_details.php?id=${ipId}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           // Set basic information
           //   document.getElementById("viewId").value = data.id || "";
           document.getElementById("viewLastname").value = data.last_name || "";
@@ -73,10 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
           document.getElementById("viewSiblings").value = data.siblings || "";
           document.getElementById("viewOccupation").value =
             data.occupation || "";
-          //   document.getElementById("viewOther_assistance").value =
-          //     data.other_assistance || "";
+
+          data.other_assistance === "Yes"
+            ? (document.getElementById("viewAssistanceYes").checked = true)
+            : (document.getElementById("viewAssistanceNo").checked = true);
+
+          console.log(data.other_assistance);
+
           document.getElementById("viewAssistance_specify").value =
             data.assistance_specify || "";
+
           document.getElementById("viewSignature").value = data.signature || "";
           document.getElementById("viewDate_accomplished").value =
             data.date_accomplished || "";

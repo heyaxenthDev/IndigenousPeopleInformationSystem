@@ -128,7 +128,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-xl-6">
+                <!-- <div class="col-md-12 col-xl-6">
                     <div class="card" data-aos="fade-up" data-aos-delay="1000">
                         <div class="flex-wrap card-header d-flex justify-content-between">
                             <div class="header-title">
@@ -152,10 +152,10 @@
                             <div id="d-activity" class="d-activity"></div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div class="col-md-12 col-lg-4">
+        <!-- <div class="col-md-12 col-lg-4">
             <div class="row">
                 <div class="col-md-12 col-lg-12">
                     <div class="card" data-aos="fade-up" data-aos-delay="600">
@@ -211,7 +211,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 
