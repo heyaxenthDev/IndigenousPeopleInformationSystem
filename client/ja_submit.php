@@ -19,8 +19,20 @@ function upload_id_picture($file) {
     return null;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitJA'])) {
     // Sanitize and collect POST data
+    $last_name = $_POST['last_name'] ?? '';
+    $first_name = $_POST['first_name'] ?? '';
+    $middle_name = $_POST['middle_name'] ?? '';
+    $maiden_name = $_POST['maiden_name'] ?? '';
+    $date_of_birth = $_POST['date_of_birth'] ?? '';
+    $place_of_birth = $_POST['place_of_birth'] ?? '';
+    $perm_address = $_POST['permanent_address'] ?? '';
+    $street = $_POST['street'] ?? '';
+    $barangay = $_POST['barangay'] ?? '';
+    $municipality = $_POST['municipality'] ?? '';
+    $province = $_POST['province'] ?? '';
+    $zip_code = $_POST['zip_code'] ?? '';
     $indigenous_member = $_POST['indigenous_member'] ?? '';
     $indigenous_specify = $_POST['indigenous_specify'] ?? '';
     $pwd = $_POST['pwd'] ?? '';
@@ -56,22 +68,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and execute insert
     $stmt = $conn->prepare(
-        "INSERT INTO job_application (
-            indigenous_member, indigenous_specify, pwd, pwd_specify, solo_parent, solo_specify,
-            ref_name_1, ref_address_1, ref_tel_1, ref_name_2, ref_address_2, ref_tel_2,
-            ref_name_3, ref_address_3, ref_tel_3, id_picture, gov_id, gov_id_no, gov_id_date_place,
+        "INSERT INTO job_applications (
+            lastname, firstname, middlename, maiden_name, dob, perm_address, zipCode,
+            pob, street, barangay, municipality, province,
+            indigenous_member, indigenous_specify,
+            pwd, pwd_specify,
+            solo_parent, solo_specify,
+            ref_name_1, ref_address_1, ref_tel_1,
+            ref_name_2, ref_address_2, ref_tel_2,
+            ref_name_3, ref_address_3, ref_tel_3,
+            id_picture, gov_id, gov_id_no, gov_id_date_place,
             signature, date_accomplished, right_thumbmark, affiant_date, administering_oath
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
     );
     $stmt->bind_param(
-        "ssssssssssssssssssssssss",
-        $indigenous_member, $indigenous_specify, $pwd, $pwd_specify, $solo_parent, $solo_specify,
+        "ssssssssssssssssssssssssssssssssssss",
+        $last_name, $first_name, $middle_name, $maiden_name,
+        $date_of_birth, $perm_address, $zip_code,
+        $place_of_birth, $street, $barangay, $municipality, $province,
+        $indigenous_member, $indigenous_specify,
+        $pwd, $pwd_specify,
+        $solo_parent, $solo_specify,
         $ref_name_1, $ref_address_1, $ref_tel_1,
         $ref_name_2, $ref_address_2, $ref_tel_2,
         $ref_name_3, $ref_address_3, $ref_tel_3,
         $id_picture, $gov_id, $gov_id_no, $gov_id_date_place,
-        $signature, $date_accomplished, $right_thumbmark, $affiant_date, $administering_oath
+        $signature, $date_accomplished, $right_thumbmark,
+        $affiant_date, $administering_oath
     );
+    
     if ($stmt->execute()) {
         $_SESSION['status'] = "Success";
         $_SESSION['status_text'] = "Application submitted successfully";

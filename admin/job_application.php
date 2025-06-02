@@ -16,7 +16,8 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
-                        <h4 class="card-title">List of Job Applications</h4>
+                        <!-- <h4 class="card-title">List of Job Applications</h4> -->
+                        <h4 class="card-title">List of Indigenous People Job Applicants</h4>
                     </div>
                 </div>
                 <div class="card-body">
@@ -24,15 +25,13 @@
                         <table id="datatable" class="table table-striped" data-toggle="data-table">
                             <thead>
                                 <tr>
-                                    <th>First Name </th>
+                                    <th>Indigenous Member</th>
                                     <th>Last Name</th>
+                                    <th>First Name</th>
                                     <th>Middle Name</th>
-                                    <th>Suffix</th>
-                                    <th>Gender</th>
-                                    <th>Age</th>
-                                    <th>Status</th>
                                     <th>Barangay</th>
-                                    <th>Contact No.</th>
+                                    <th>Date Accomplished</th>
+                                    <!-- <th>Status</th> -->
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -43,18 +42,18 @@
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
                                 <tr>
-                                    <td><?php echo $row['first_name']; ?></td>
-                                    <td><?php echo $row['last_name']; ?></td>
-                                    <td><?php echo $row['middle_name']; ?></td>
-                                    <td><?php echo $row['suffix']; ?></td>
-                                    <td><?php echo $row['gender']; ?></td>
-                                    <td><?php echo $row['age']; ?></td>
-                                    <td><?php echo $row['status']; ?></td>
-                                    <td><?php echo $row['barangay']; ?></td>
-                                    <td><?php echo $row['contact_no']; ?></td>
+                                    <td><?= $row['indigenous_member']; ?></td>
+                                    <td><?= $row['lastname']; ?></td>
+                                    <td><?= $row['firstname']; ?></td>
+                                    <td><?= $row['middlename']; ?></td>
+                                    <td><?= $row['barangay']; ?></td>
+                                    <td><?= $row['date_accomplished']; ?></td>
+                                    <!-- <td><?= $row['status']; ?></td> -->
                                     <td>
-                                        <button class="btn btn-primary"><i class="bi bi-pencil-square"></i></button>
-                                        <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                        <button class="btn btn-sm btn-success view-job-application"
+                                            data-view-ja="<?=$row['id']?>"><i class="bi bi-eye"></i></button>
+                                        <button class="btn btn-sm btn-danger delete-job-application"
+                                            data-delete-ja="<?=$row['id']?>"><i class="bi bi-trash"></i></button>
                                     </td>
                                 </tr>
                                 <?php 
@@ -70,8 +69,10 @@
 </div>
 
 <?php 
-include 'utils/jobModal.php';
+include 'utils/jaViewModal.php';
 ?>
+
+<script src="js/job_details.js"></script>
 
 <?php 
 include '../admin/includes/footer.php';

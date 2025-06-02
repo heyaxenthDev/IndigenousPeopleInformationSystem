@@ -16,10 +16,10 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
-                        <h4 class="card-title">List of IP Families</h4>
+                        <h4 class="card-title">List of Indigenous People Ancestry</h4>
                     </div>
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addIPmodal"><i
-                            class="bi bi-plus-circle"></i> Add IP Family</button>
+                            class="bi bi-plus-circle"></i> Add Ancestry</button>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

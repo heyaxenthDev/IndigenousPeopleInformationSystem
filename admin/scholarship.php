@@ -15,7 +15,8 @@
             <div class="card">
                 <div class="card-header d-flex justify-content-between">
                     <div class="header-title">
-                        <h4 class="card-title">List of Scholarship Submissions</h4>
+                        <!-- <h4 class="card-title">List of Scholarship Submissions</h4> -->
+                        <h4 class="card-title">List of Indigenous People Scholarship Applicants</h4>
                     </div>
 
                 </div>

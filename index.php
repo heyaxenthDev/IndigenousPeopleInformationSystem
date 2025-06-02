@@ -144,7 +144,7 @@ session_start();
                             <i class="bi bi-geo-alt flex-shrink-0"></i>
                             <div>
                                 <h3>Address</h3>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <p>Poblacion, Lau-an, Antique</p>
                             </div>
                         </div><!-- End Info Item -->
 
@@ -152,7 +152,7 @@ session_start();
                             <i class="bi bi-telephone flex-shrink-0"></i>
                             <div>
                                 <h3>Call Us</h3>
-                                <p>+1 5589 55488 55</p>
+                                <p>(+63) 905 021 5158</p>
                             </div>
                         </div><!-- End Info Item -->
 
@@ -160,7 +160,7 @@ session_start();
                             <i class="bi bi-envelope flex-shrink-0"></i>
                             <div>
                                 <h3>Email Us</h3>
-                                <p>info@example.com</p>
+                                <p>lauanmayorsoffice@gmail.com</p>
                             </div>
                         </div><!-- End Info Item -->
 

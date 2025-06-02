@@ -100,8 +100,8 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo $current_page == 'family_member' ? 'active' : ''; ?>"
-                        href="<?= get_page_link('../admin/family_member') ?>">
+                    <a class="nav-link <?php echo $current_page == 'ancestry' ? 'active' : ''; ?>"
+                        href="<?= get_page_link('../admin/ancestry') ?>">
                         <i class="icon">
                             <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 class="icon-20">
@@ -116,7 +116,7 @@
                                     fill="currentColor"></path>
                             </svg>
                         </i>
-                        <span class="item-name">Family Members</span>
+                        <span class="item-name">Ancestry</span>
                     </a>
                 </li>
                 <li>
